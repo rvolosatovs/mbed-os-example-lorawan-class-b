@@ -4,4 +4,5 @@ BUILD
 __pycache__
 .vscode
 *.pyc
-
+.ccls-cache
+venv
