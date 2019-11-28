@@ -107,19 +107,6 @@ int main()
 {
     memset(&app_data, 0, sizeof(app_data));
 
-    if (get_built_in_dev_eui(DEV_EUI, sizeof(DEV_EUI)) == 0) {
-        printf("read built-in dev eui: %02x %02x %02x %02x %02x %02x %02x %02x\n",
-               DEV_EUI[0], DEV_EUI[1], DEV_EUI[2], DEV_EUI[3], DEV_EUI[4], DEV_EUI[5], DEV_EUI[6], DEV_EUI[7]);
-    }
-
-    if (DEV_EUI[0] == 0x0 && DEV_EUI[1] == 0x0 &&
-            DEV_EUI[2] == 0x0 && DEV_EUI[3] == 0x0 &&
-            DEV_EUI[4] == 0x0 && DEV_EUI[5] == 0x0 &&
-            DEV_EUI[6] == 0x0 && DEV_EUI[7] == 0x0) {
-        printf("Set your LoRaWAN credentials first!\n");
-        return -1;
-    }
-
     // Enable trace output for this demo, so we can see what the LoRaWAN stack does
     mbed_trace_init();
 
